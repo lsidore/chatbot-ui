@@ -12,6 +12,9 @@ export default defineConfig({
       output: {
         inlineDynamicImports: true,
         manualChunks: undefined,
+        // S'assurer que ChatbotWidget est exposé globalement
+        extend: true,
+        exports: "named",
       },
     },
     minify: "terser",
